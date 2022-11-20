@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Zelda;
+  src: url(/font/retganon.ttf);
+}
+
+h2 {
+  font-family: Zelda;
+  font-size: 60px;
+  color: #2c6436;
+  text-shadow: rgb(11, 87, 17) 1px 0 5px;
+  outline-color: #14772e;
+  -webkit-text-stroke: 5px rgb(16, 124, 75);
+}
+canvas {
+  border: 5px outset hsl(0, 0%, 0%);
+  background-image: url(/ressources/Background.jfif);
+  background-size: 1000px 800px; 
+}
+#myCanvas {
+    border: 8px solid grey;
+  }
+
+  body {
+    display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-image: url(/ressources/47698.gif);
+background-size:cover;
+}
+  
+  #controls {
+    float:left;
+      font-family: Zelda;
+      background-color: #053b20;
+      border: 5px inset #09a37d;
+      margin-top: 10px;
+      box-sizing: border-box;
+      padding: 10px;
+      color: rgb(16, 100, 37);
+  }
+
+  
