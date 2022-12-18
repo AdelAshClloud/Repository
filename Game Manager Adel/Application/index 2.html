@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Video Game manager, v4</title>
+  <meta charset="utf-8"/>
+	<script src=script3.js></script>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+	<h2>Video Game Manager</h2>	
+<body> 
+	<form onsubmit="return formSubmitted();">
+	 <fieldset>
+    <legend>Video Games informations</legend>
+		<label>
+		
+			<input type="text" id="name" placeholder=" " required> 
+			<span>Nom du jeu : </span>
+		</label>
+		<label>
+			
+			<input type="text" id="email" placeholder=" " required>
+			<span>Disponibilité :	</span>
+		</label>
+		<label>
+			<input type="text" id="éditeur" placeholder=" " required>
+			<span>Editeur : </span>
+		</label>
+		<label>
+			<input type="text" id="catégorie" placeholder=" " required>
+			<span>Catégorie : </span>
+		</label>	
+		<label>
+		
+			<input type="text" id="image" placeholder=" " required>
+			<span>Image du Jeu : </span>
+		</label>
+		<br>
+		<button>Add new Game </button>
+		 <button type="button" class="btn cancel"	onclick="closeForm()">Close</button>
+	</fieldset>
+	
+	</form>
+<form id="form2" style="display: none"> 
+	<label>Nom du Jeu:	</label>
+	<fieldset>
+ <input id="gameSearch"  type="text">
+<button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+		</fieldset>
+	</form>
+
+	<block>
+	<tr>
+	
+	
+		<div id="games"></div>
+  
+
+<p>
+	<button onclick="emptyList();" class="button1">Empty</button> 
+	<button onclick="cm.save();"class="button2">Save</button> 
+  <button onclick="loadList();"class="button3">Load</button>
+</p>
+</block>
+</body>
+</html>

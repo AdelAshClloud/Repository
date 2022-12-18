@@ -1,0 +1,75 @@
+HTML : 
+- Changement du title et du H2
+- Ajout des différents labels demandés : " Nom du jeu, disponibilité,éditeur,catégorie,image du jeu"
+- <button>Ajout du jeu</button>
+		<button type="button" class="btn cancel" onclick="closeForm()">Close</button> 
+- Ajout de la fonction de recherche : <input id="gameSearch"  type="text">
+<button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+
+
+CSS : 
+
+-  Amélioration de l'aspect général en CSS
+- Amélioration du H2 : h2{
+  position: relative;
+  text-align: center;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  
+  
+    }
+
+- Amélioration du tableau contenant les différents jeux
+- Ajustement de la taille des images
+
+
+JS : 
+
+- ajout de l'icône poubelle : const iconURL =  'https://i.imgur.com/yHyDPio.png' mais celle-ci ne s'affiche pas sur mon jeu
+- Création des différentes barres de recherches pour les labels function formSubmitted() {
+									// Get the values from input fields
+										let name = document.querySelector("#name");
+										let editeur = document.querySelector("#éditeur");
+										let caté = document.querySelector("#catégorie");
+										let image = document.querySelector("#image");
+  										let email = document.querySelector("#email");
+
+- remplacement des valeurs "contacts" par les valeurs games
+- Création des données des jeux qui vont s'afficher au départ dans le tableau : addTestData() {
+											var c1 = new Game("The Witcher","PC, PS3, PS4", "CD Projekt Red", "RPG", "https://image.jeuxvideo.com/medias/142247/1422469608-7141-jaquette-avant.jpg");
+  											var c2 = new Game("God of war Ragnarok","PS4,PS5", "Santa Monica Studio", "RPG", "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png");
+  											var c3 = new Game("ELDEN RING","PS5, PC", "FromSoftware", "RPG", "https://image.api.playstation.com/vulcan/ap/rnd/202107/1612/Y5RHNmzAtc6sRYwZlYiKHAxN.png");
+  											var c4 = new Game("The Last of us","PS4,PS5", "Naughty Dog", "Action-Aventure","https://image.api.playstation.com/vulcan/img/rnd/202011/1020/FKgazVvG7BcWouCr39mIiXkW.png");
+											var c5 = new Game("Kingdom Hearts 3","PS5", "Square Enix", "J-RPG","https://image.jeuxvideo.com/medias/161722/1617220611-4137-jaquette-avant.jpg");
+													this.add(c1);
+													this.add(c2);
+													this.add(c3);
+													this.add(c4);
+													this.add(c5);	
+
+- création et déclaration des titres du tableau header.innerHTML
+- Fonction qui permet d'effacer un titre lorsque l'on clique sur l'image de la poubelle : document.querySelectorAll('img').forEach((element) => {
+	element.addEventListener('click', () => {
+		this.remove(gamesArr[element.dataset.gameId]);
+		this.displayGamesAsATable('games');
+	})
+})
+
+- Création du bouton de suppression let iconCell = document.createElement('td');
+							let trashBin = document.createElement('img');
+							trashBin.src = iconURL;
+							trashBin.dataset.gameId = index;
+							iconCell.append(trashBin);
+- Ajout de la colonne poubelle row.append(iconCell);
+- Fonction qui va permettre de rechercher le jeu et de le display dans le tableau document.querySelector('#gameSearch').addEventListener('input', (event) => {
+			findGame(event.target.value);
+		})
+		 function findGame(name) {
+			const games = cm.listOfGames;
+			const regex = new RegExp(`${name}`, 'i')
+			const resultat = games.filter(game => game.name.match(regex));
+			console.log(resultat);
+		
+			cm.displayGamesAsATable('games', resultat)
+		}
+

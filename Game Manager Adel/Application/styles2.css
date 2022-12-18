@@ -1,0 +1,51 @@
+
+h2{
+  position: relative;
+  text-align: center;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  
+  
+    }
+p, h2{
+
+align-items: center;
+color: #12182c;
+
+  }
+  table {
+    align-items:center;
+    margin-top: 20px;
+    background-color: #474d61ed;
+      letter-spacing: 1px;
+      color:rgb(0, 0, 0);
+      text-transform: uppercase; 
+  }
+
+  fieldset {
+    padding: 10px;
+    border:none;
+
+    
+  }
+  input:invalid {
+    background-color: rgb(21, 13, 58);
+  }
+  
+  input:valid {
+    background-color: #00e1ff;
+  }
+ 
+  
+  img{
+    width:50px;
+    height:50px;
+  }
+
+  body {
+    display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-image: url(/ressources/japan-scenery.gif);
+background-size:cover;
+}
